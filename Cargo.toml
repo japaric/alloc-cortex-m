@@ -22,11 +22,31 @@ name = "alloc-cortex-m"
 version = "0.4.0"
 
 [dependencies]
+tlsf = { git = "https://github.com/FluenTech/tlsf" }
 cortex-m = "0.6.2"
 
-[dependencies.linked_list_allocator]
-default-features = false
-version = "0.8.1"
+[features]
+FLI6 = ["tlsf/FLI6"]
+FLI7 = ["tlsf/FLI7"]
+FLI8 = ["tlsf/FLI8"]
+FLI9 = ["tlsf/FLI9"]
+FLI10 = ["tlsf/FLI10"]
+FLI11 = ["tlsf/FLI11"]
+FLI12 = ["tlsf/FLI12"]
+FLI13 = ["tlsf/FLI13"]
+FLI14 = ["tlsf/FLI14"]
+FLI15 = ["tlsf/FLI15"]
+
+#[dependencies.linked_list_allocator]
+#default-features = false
+#version = "0.8.1"
+
 
 [dev-dependencies]
+nrf52832-hal = { version = "0.10.0", default-features = false, features = ["rt", "xxAA-package"] }
+cortex-m = "0.6.2"
+panic-halt = "0.2.0"
+spin = "0.5.2"
+jlink_rtt = "0.2.0"
+panic_rtt = "0.3.0"
 cortex-m-rt = "0.6.12"

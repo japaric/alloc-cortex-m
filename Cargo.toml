@@ -22,7 +22,7 @@ name = "alloc-cortex-m"
 version = "0.4.1"
 
 [dependencies]
-cortex-m = "0.6.2"
+cortex-m = "0.7.2"
 
 [dependencies.linked_list_allocator]
 default-features = false
